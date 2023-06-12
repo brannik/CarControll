@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView
+        android:scrollbars="none"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#424242"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".MainActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#504E4E"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+        <!-- MAIN -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- TITLE AREA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginVertical="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Car Controll"/>
+
+            </LinearLayout>
+            <!-- TITLE AREA END -->
+            <!-- NOTIFICATIONS AREA -->
+            <LinearLayout
+                android:id="@+id/LO_NOTIFICATIONS"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/yellow"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/TXT_WARNING"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <!-- NOTIFICATIONS AREA END -->
+            <!-- DRL -->
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                android:outlineSpotShadowColor="@color/purple_700"
+                app:cardBackgroundColor="@color/darkGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <ImageButton
+                        android:id="@+id/BTN_DRL"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        />
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textSize="16dp"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DRL Settings"/>
+                        <LinearLayout
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Delay"/>
+                            <Spinner
+                                android:id="@+id/SPINNER_DRL_DELAY"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"/>
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Auto"/>
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/TGL_DRL_DEF_STATE"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- DRL END -->
+            <!-- AMP -->
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                android:outlineSpotShadowColor="@color/purple_700"
+                app:cardBackgroundColor="@color/darkGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <ImageButton
+                        android:id="@+id/BTN_AMP"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textSize="16dp"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="AMP Settings"/>
+                        <LinearLayout
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Delay"/>
+                            <Spinner
+                                android:id="@+id/SPINNER_AMP_DELAY"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"/>
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Auto"/>
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/TGL_AMP_DEF_STATE" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- AMP END -->
+            <!-- DVR -->
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                android:outlineSpotShadowColor="@color/purple_700"
+                app:cardBackgroundColor="@color/darkGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp">
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <ImageButton
+                        android:id="@+id/BTN_DVR"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textSize="16dp"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DVR Settings"/>
+                        <LinearLayout
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Delay"/>
+                            <Spinner
+                                android:id="@+id/SPINNER_DVR_DELAY"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"/>
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Auto"/>
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/TGL_DVR_DEF_STATE"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- DVR END -->
+            <!-- INT -->
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                android:outlineSpotShadowColor="@color/purple_700"
+                app:cardBackgroundColor="@color/darkGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <ImageButton
+                        android:id="@+id/BTN_INT"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textSize="16dp"
+                            android:textAllCaps="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="INT Settings"/>
+                        <LinearLayout
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Delay"/>
+                            <Spinner
+                                android:id="@+id/SPINNER_INT_DELAY"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp"/>
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Auto"/>
+
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:id="@+id/TGL_INT_DEF_STATE"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!-- INT END -->
+            <!-- SAVE BUTTON -->
+            <LinearLayout
+                android:id="@+id/LO_BTN_SAVE_REGION"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/BTN_SAVE_SETTINGS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="SAVE"/>
+            </LinearLayout>
+            <!-- SVE BUTTON END -->
+            <!-- DEBUG  AREA -->
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/yellow"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/TXT_DEBUG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- DEBUG AREA END -->
+        </LinearLayout>
+        <!-- MAIN END -->
+    </androidx.cardview.widget.CardView>
+    </ScrollView>
+
