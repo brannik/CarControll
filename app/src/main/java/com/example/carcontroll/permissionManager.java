@@ -1,5 +1,7 @@
 package com.example.carcontroll;
 
+import static androidx.core.app.ActivityCompat.requestPermissions;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -18,15 +20,13 @@ public class permissionManager {
     }
 
     public boolean checkPermissionWifi(String permission) {
-        int result = ContextCompat.checkSelfPermission(activity,permission);
+        int result = ContextCompat.checkSelfPermission(context,permission);
         return result != PackageManager.PERMISSION_GRANTED;
     }
 
     public void requestPermissionWifi(String permission) {
-        if(ActivityCompat.shouldShowRequestPermissionRationale(activity,permission)) {
-            Toast.makeText(context.getApplicationContext(), "Please allow access to wifi", Toast.LENGTH_LONG).show();
-        }else{
-            ActivityCompat.requestPermissions(activity,new String[]{permission},1);
-        }
+        requestPermissions(activity,
+                new String[] { permission },
+                1);
     }
 }

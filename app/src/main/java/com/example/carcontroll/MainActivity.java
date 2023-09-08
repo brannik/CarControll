@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         volleyRequest = new VolleyRequest(contextOfApplication,Config.URL);
         permManager = new permissionManager(MainActivity.this,getContextOfApplication());
 
+
         wifiState = new WifiState(contextOfApplication,this);
 
         Log.w(Config.W_TAG,"Connected ? " + wifiState.isItWifiConnected());
@@ -381,12 +382,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(permManager.checkPermissionWifi(Manifest.permission.CHANGE_WIFI_STATE)){
             permManager.requestPermissionWifi(Manifest.permission.CHANGE_WIFI_STATE);
         }
-        if(permManager.checkPermissionWifi(Manifest.permission.UPDATE_DEVICE_STATS)){
+        /*
+        if(!permManager.checkPermissionWifi(Manifest.permission.UPDATE_DEVICE_STATS)){
             permManager.requestPermissionWifi(Manifest.permission.UPDATE_DEVICE_STATS);
         }
-        if(permManager.checkPermissionWifi(Manifest.permission.WAKE_LOCK)){
+        if(!permManager.checkPermissionWifi(Manifest.permission.WAKE_LOCK)){
             permManager.requestPermissionWifi(Manifest.permission.WAKE_LOCK);
         }
+        */
         //endregion
         getData(prefs);
         if(fRun){
